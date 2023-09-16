@@ -1,0 +1,25 @@
+<div class="container mt-5">
+  <div class="row justify-content-center mt-5">
+    <div class="col-lg-6">
+      <form novalidate [formGroup]="userForm" (ngSubmit)="submitForm()">
+        <div *ngIf="error">
+          <h3>{{error}}</h3>
+        </div>
+        <div>
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" formControlName="email" readonly>
+        </div>
+        <div>
+          <label for="firstName" class="form-label">First name</label>
+          <input type="text" class="form-control" formControlName="firstName">
+        </div>
+        <div>
+          <label for="lastName" class="form-label">Last name</label>
+          <input type="text" class="form-control" formControlName="lastName">
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+      </form>
+
+    </div>
+  </div>
+</div>

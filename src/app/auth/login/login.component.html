@@ -1,0 +1,36 @@
+<div class="container-fluid">
+  <div class="row vertical-center justify-content-center">
+    <div class="col-lg-4">
+      <div class="card">
+        <div class="card-body py-4">
+          <div class="alert alert-danger" *ngIf="error">
+            {{error}}
+          </div>
+          <h4 class="d-inline border-bottom">LOGIN</h4>
+          <form novalidate [formGroup]="loginForm" class="mt-4
+      " (ngSubmit)="formSubmit()">
+
+            <div class="">
+
+              <p>
+                <label class="sr-only mb-2" for="" class="form-label">Email Address</label>
+                <input class="form-control" type="email" formControlName="email" placeholder="Email Address">
+              </p>
+              <p>
+                <label class="sr-only mb-2" for="" class="form-label">Password</label>
+                <input class="form-control" type="email" formControlName="password" placeholder="Password">
+              </p>
+              <div class="text-center">
+                <button class="btn btn-primary " type="sumbit">Sign In
+
+
+                </button>
+
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
